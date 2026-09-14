@@ -1,6 +1,6 @@
 \documentclass[8pt,a4paper]{article}
 
-\usepackage[a4paper,top=0.20in,bottom=0.20in,left=0.36in,right=0.36in]{geometry}
+\usepackage[a4paper,top=0.40in,bottom=0.20in,left=0.65in,right=0.75in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -13,6 +13,7 @@
 \usepackage{microtype}
 \usepackage{titlesec}
 \usepackage{ragged2e}
+\usepackage{fontawesome5}
 
 \definecolor{resumePurple}{RGB}{128,84,162}
 \definecolor{linkBlue}{RGB}{70,105,235}
@@ -22,17 +23,17 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \renewcommand{\baselinestretch}{0.92}
-\setlist[itemize]{leftmargin=1.25em,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt}
+\setlist[itemize]{leftmargin=1.75em,itemsep=4pt,topsep=4pt,parsep=0pt,partopsep=0pt}
 \renewcommand{\labelitemi}{\raisebox{0.2ex}{\tiny$\bullet$}}
 
 \titleformat{\section}{\normalsize\bfseries\color{resumePurple}}{}{0pt}{}
 \titlespacing*{\section}{0pt}{4pt}{3pt}
 
-\newcommand{\sectionrule}{\vspace{1pt}\noindent\textcolor{resumePurple}{\rule{\linewidth}{0.6pt}}\vspace{1pt}}
+\newcommand{\sectionrule}{\noindent\textcolor{resumePurple}{\rule{\linewidth}{0.6pt}}\vspace{1pt}}
 \newcommand{\job}[2]{%
   \vspace{1pt}
   \begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}p{1.7in}@{}}
-    \textbf{#1} & \textbf{#2}
+    #1 & \textbf{#2}
   \end{tabularx}
 }
 \newcommand{\project}[2]{%
@@ -46,57 +47,63 @@
 
 \begin{center}
     {\fontsize{20}{22}\selectfont\bfseries\color{resumePurple} GAURANSH KHURANA}\\[3pt]
-    {\small gauranshkhurana.work@gmail.com \textbullet\ +91 9958284607 \textbullet\ \href{https://github.com/Mentor2108}{\underline{Github}} \textbullet\ \href{https://www.linkedin.com/in/gauranshkhurana/}{\underline{LinkedIn}}}
+    {\small \faAt\ gauranshkhurana.work@gmail.com \textbullet\ \faPhone\ +91 9958284607 \textbullet\ \faGithub\ \href{https://github.com/ResplenDuck}{\underline{Github}} \textbullet\ \faLinkedin\ \href{https://www.linkedin.com/in/gauranshkhurana/}{\underline{LinkedIn}}}
 \end{center}
 
 \sectionrule
-\section*{EDUCATION}
-\begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}p{1.7in}@{}}
-    \textbf{Bachelor of Technology in Computation and Mathematics} & \textbf{Oct 2020 - Jun 2024}
+\section*{SKILLS}
+
+\begin{tabularx}{\linewidth}{@{}
+    >{\raggedright\arraybackslash}p{1.65in}
+    @{\hspace{0.15in}}
+    >{\raggedright\arraybackslash}X
+@{}}
+\textbf{Programming Languages:} & Java, Go, JavaScript, TypeScript, C/C++, Python, Bash \\[2pt]
+\textbf{Frameworks \& Libraries:} & SpringBoot, Angular, Stencil, OpenAPI, React \\[2pt]
+\textbf{Database:} & PostgreSQL, Redis, MySQL, Oracle SQL, OpenSearch \\[2pt]
+\textbf{Cloud, DevOps \& Tools:} & AWS, Digital Ocean, Oracle Cloud (OCI), Linux, Git/GitHub, Docker, Kubernetes \\[2pt]
+\textbf{Concepts:} & OOP, Data Structures, Algorithms, Distributed Systems \\[2pt]
+\textbf{Other:} & Microservices, Web Scraping, WireGuard, Gen AI, A11Y
 \end{tabularx}
-Mahindra University
-\begin{itemize}
-    \item Studied various areas in Mathematics and Computer Science along with their Practical Applications.
-\end{itemize}
 
 \sectionrule
 \section*{WORK EXPERIENCE}
 
-\job{Software Developer, ADP Pvt. Ltd.}{Oct 2024 - Present}
-\textbf{Key Responsibilities:}
+\job{\textbf{ADP Pvt. Ltd.}\\[2pt]\textit{Software Developer}}{Oct 2024 - Present}
 \begin{itemize}
-    \item Working with \textbf{Next Gen Payroll Innovation Project} to give a seamless experience to all users.
-    \item Currently building a platform for ease of supporting new countries, by reducing time from a few months down to a few hours.
-    \item Worked in \textbf{Java} and \textbf{Angular} to build a \textbf{microservice} and corresponding dashboard, managing data for 10,000+ clients consisting of over 100,000+ associates and their corresponding payments, to surface tax anomalies.
-    \item Creating an MFE using \textbf{Stencil} and \textbf{Typescript} for a new project, aiming to \textbf{reduce the time} to setup a new country into NextGen Payroll from \textbf{2-4 months down to a couple of days}. The aim is to provide the domain specialists a UI consisting of all the necessary information in one place to edit. A specialised model will be helping to pre-populate basic information to aid in the process.
-    \item Leading frontend MFE development using Gen AI, delivering fully tested, production-ready, A11Y compliant infrastructure, acting as the primary point of contact for cross-team communication, requirement alignment, delivery planning, and milestone scheduling.
+    \item Contributing to ADP’s Next Gen Payroll Innovation initiatives by designing and delivering \textbf{scalable frontend, backend solutions} and \textbf{distributed systems}, to simplify complex payroll workflows and improve the experience for payroll users.
+    \item \textbf{Reduced build times} across multiple microservices by \textbf{60\%} by analysing dependency and test execution patterns, optimizing redundant unit/integration test coverage, and streamlining CI build workflows.
+    \item Developed \textbf{Java-based microservices} and an \textbf{Angular dashboard} managing payroll data for \textbf{10,000+ clients} and \textbf{100,000+ associates}, enabling domain specialists to identify tax anomalies and improving visibility into potential payment issues.
+    \item Architected and developed a \textbf{Stencil/TypeScript micro-frontend} that reduced new-country setup time by \textbf{~97\%}, from approximately \textbf{3 months to 3 days}, by centralizing configuration workflows and enabling model-assisted data pre-population.
+    \item Led frontend MFE development and cross-team coordination to consistently deliver multiple quarter-long features \textbf{~33\% faster}, completing planned \textbf{3-month work in ~2 months} while maintaining full scope, zero requirement shifts, and consistent production-ready code quality.
+    \item Drove end-to-end delivery of production-ready features across multiple microservices and frontend applications, \textbf{owning architecture} through deployment and creating clean, intuitive user flows that \textbf{improved feature usability and reduced workflow complexity}.
 \end{itemize}
 
-\job{Backend Developer, Kisai Technologies Pvt. Ltd.}{Jan 2024 - Sep 2024}
-\textbf{Key Responsibilities:}
+\job{\textbf{Kisai Technologies Pvt. Ltd.}\\[2pt]\textit{Backend Developer}}{Jan 2024 - Sep 2024}
 \begin{itemize}
-    \item Worked with \textbf{GoLang} and developed various tools, libraries and micro-services for the company.
-    \item Designed a \textbf{web scraping service} capable of extracting and managing data from static as well as dynamic websites which could be configured for various use-cases. Facilitated data collection for training LLMs and improving accuracy by handling text, tables, and images from nested links.
-    \item Created a \textbf{Synthetic Data Generation} library for generating and manipulating synthetic data, including integers, floats, and strings. Implemented features for random data retrieval, synonym replacement, \textbf{fuzzy matching} etc. to support testing and model training.
-    \item Conducted \textbf{comprehensive testing across microservices} to ensure functionality and security. \textbf{Identified critical bugs} and created automated test scripts to prevent regressions during platform upgrades.
-    \item Built \textbf{Postman API parser} for converting collections into YAML formats for use with Kisai’s Automated Testing Client. Automated the import and documentation of API requests, enhancing testing efficiency and documentation accuracy.
+    \item Engineered a \textbf{resumable chunk-uploading interface} with persistent upload state and parallel server connections, achieving up to \textbf{80\% higher upload speeds} while enabling users to pause, resume, and recover uploads without losing progress after connection failures.
+    \item Developed and maintained \textbf{Go-based tools, libraries, and microservices} across the platform, improving development efficiency through reusable components and configurable services supporting multiple internal use cases.
+    \item Designed and implemented a configurable \textbf{web-scraping service} supporting static and dynamic websites, recursively extracting text, tables, and images from nested links with \textbf{93\% extraction accuracy} to streamline large-scale data collection for LLM training.
+    \item Built a reusable \textbf{synthetic data generation library} supporting multiple data types and manipulation capabilities, including randomized generation, synonym replacement, and fuzzy matching, reducing testing time by \textbf{45\%} and accelerating dataset preparation for testing and model training.
+    \item Implemented comprehensive \textbf{functional and security testing} across microservices, identifying critical defects and developing automated regression suites that improved release confidence and prevented recurring issues during platform upgrades.
+    \item Developed a \textbf{Postman API parser} to automatically convert collections into YAML for Kisai’s Automated Testing Client, reducing manual API import and documentation effort while improving consistency and accuracy across test configurations.
 \end{itemize}
 
-\job{Software Development Intern, ADP Pvt. Ltd.}{Jul 2023 - Oct 2023}
-\textbf{Key Responsibilities:}
+\job{\textbf{ADP Pvt. Ltd.}\\[2pt]\textit{Software Development Intern}}{Jul 2023 - Oct 2023}
 \begin{itemize}
     \item Worked on Development Database in \textbf{OpenSearch} to develop a Dashboard for \textbf{data visualization and validation}.
     \item Worked with \textbf{Spring framework} to connect OpenSearch cluster to perform complex queries and retrieve data to \textbf{automatically generate Form 941} containing all information about a customer’s tax filing.
 \end{itemize}
 
 \sectionrule
+\newpage
 \section*{PROJECTS}
 
-\project{\textbf{Automated Scraper} (\href{https://github.com/Mentor2108/web-scraper}{\underline{Scraper Backend}}, \href{https://github.com/Mentor2108/scrape-frontend}{\underline{Scraper Frontend}})}{Jan-Feb 2025}
+\project{\textbf{Automated Scraper} (\href{https://github.com/ResplenDuck/web-scraper}{\underline{Scraper Backend}}, \href{https://github.com/ResplenDuck/scrape-frontend}{\underline{Scraper Frontend}})}{Jan-Feb 2025}
 \textbf{Tech Stack:} GoLang, chromedp library, goquery library, HTML
 \begin{itemize}
     \item This scraper helps the user to scrape complex websites without manually writing code, It can be scaled to almost all websites and scrape data in different formats without needing to learn the specifics about scraping or coding experience.
-    \item User can use the service to scrape dynamic sites, download pictures, and fill up structured data in their database directly from the website which provides a way for building up huge datasets for various tasks like building and training models, finding patterns, visualising data etc.
+    \item User can use the service to \textbf{scrape dynamic sites}, \textbf{download pictures}, and fill up structured data in their database directly from the website which provides a way for building up huge datasets for various tasks like building and training models, finding patterns, visualising data etc.
 \end{itemize}
 
 \project{\textbf{DateTime Parser}}{April 2024}
@@ -109,14 +116,27 @@ Mahindra University
 \project{\textbf{Wireguard VPN}}{November 2022}
 \textbf{Tech Stack:} Wireguard, AWS
 \begin{itemize}
-    \item Used an open-source software, wireguard to set up own private VPN on Cloud servers like DigitalOcean, AWS and OCI. Setup Private LAN networks and routed all traffic through the server.
+    \item Deployed WireGuard-based private VPN infrastructure across \textbf{DigitalOcean, AWS, and OCI}, configuring encrypted tunnels, \textbf{IP forwarding}, private LAN routing, and a \textbf{custom DNS resolver} to securely route client traffic through cloud gateways while providing private network connectivity.
 \end{itemize}
 
 \sectionrule
-\section*{ADDITIONAL INFORMATION}
-\textbf{Technical Skills:} Java, GoLang, JavaScript, Python, C/C++, Bash, Springboot, React, Angular, TypeScript, git/github, AWS, OCI, Linux
+\section*{EDUCATION}
+\begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}p{1.7in}@{}}
+    \textbf{Bachelor of Technology in Computation and Mathematics} & \textbf{Oct 2020 - Jun 2024}
+\end{tabularx}
+Mahindra University
+\begin{itemize}
+    \item Studied various areas in Mathematics and Computer Science along with their Practical Applications.
+\end{itemize}
 
-\vspace{1pt}
-\textbf{Database:}\hspace{1.25em}PostreSQL, MySQL, OpenSearch
+\sectionrule
+\section*{ACHIEVEMENTS \& CERTIFICATIONS}
+\begin{itemize}
+    \item \textbf{President, Hurricane Club} — the programming club of my college, and hosting programming events.
+    \item \textbf{Merit Scholarship Recipient} — Awarded a merit-based scholarship throughout all years of undergraduate study.
+    \item \textbf{IRM Level 1 Certified} — Completed Level 1 certification in Institute of Risk Management.
+    \item \textbf{Silver Medalist} — Graduated as the 2nd-ranked student in the college based on overall academic performance.
+    \item \textbf{Karate} — Achieved Brown Belt Level 3, demonstrating sustained training, discipline, and dedication.
+\end{itemize}
 
 \end{document}
