@@ -1,6 +1,6 @@
 Hello! I am Gauransh Khurana and this is my resume project that conviniently builds my resume to a pdf based on the resume.tex LaTeX file.
 
-Link to view my resume https://github.com/ResplenDuck/resume/releases/latest/download/resume.pdf
+Link to view my resume https://github.com/ResplenDuck/resume-creator/releases/latest/download/gauransh_khurana_resume.pdf
 
 ## Version Format
 vX.Y.Z
